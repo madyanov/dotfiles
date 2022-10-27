@@ -20,6 +20,7 @@ set.shiftround = true
 set.cindent = true
 set.breakindent = true
 set.list = true
+set.listchars:append({ lead = "·" })
 set.autoindent = true -- Neovim default
 set.smarttab = true -- Neovim default
 

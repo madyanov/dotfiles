@@ -33,7 +33,7 @@ require("packer").startup(function (use)
         end
     })
 
-    use("nvim-treesitter/playground")
+    -- use("nvim-treesitter/playground")
 
     if packer_bootstrap then
         require("packer").sync()
@@ -42,7 +42,13 @@ end)
 
 -- telescope
 local telescope = require("telescope")
-telescope.setup()
+
+telescope.setup({
+    defaults = {
+        file_ignore_patterns = { "build", ".cache" }
+    }
+})
+
 telescope.load_extension("fzf")
 
 -- gitsigns

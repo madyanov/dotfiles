@@ -8,10 +8,11 @@ set background=dark
 let g:colors_name = "gruber"
 
 " Colors
-let s:black     = ["#1c1c1c", "234"]
-let s:graphite  = ["#262626", "235"]
-let s:gray      = ["#626262", "241"]
-let s:white     = ["#e4e4e4", "254"]
+let s:black         = ["#1c1c1c", "234"]
+let s:lightblack    = ["#262626", "235"]
+let s:darkgray      = ["#444444", "238"]
+let s:gray          = ["#626262", "241"]
+let s:white         = ["#e4e4e4", "254"]
 
 let s:red       = ["#ff5f5f", "203"]
 let s:green     = ["#87d75f", "113"]
@@ -110,7 +111,7 @@ highlight! link lCursor     Cursor
 highlight! link CursorIM    Cursor
 highlight! link TermCursor  Cursor
 
-call s:hl("CursorLine",     { "bg": s:graphite })
+call s:hl("CursorLine",     { "bg": s:lightblack })
 highlight! link CursorColumn CursorLine
 
 call s:hl("CursorLineNr",   { "style": "bold" })
@@ -120,8 +121,8 @@ call s:hl("LineNr",         { "fg": s:gray })
 call s:hl("SignColumn",     { "bg": s:black })
 
 " Status line
-call s:hl("StatusLine",     { "fg": s:white, "bg": s:graphite })
-call s:hl("StatusLineNC",   { "fg": s:gray, "bg": s:graphite })
+call s:hl("StatusLine",     { "fg": s:white, "bg": s:lightblack })
+call s:hl("StatusLineNC",   { "fg": s:gray, "bg": s:lightblack })
 
 " Search
 call s:hl("Search",         { "fg": s:white, "bg": s:gray })
@@ -129,14 +130,14 @@ call s:hl("IncSearch",      { "fg": s:black, "bg": s:yellow })
 call s:hl("CurSearch",      { "fg": s:black, "bg": s:yellow, "style": "bold" })
 
 " Completion
-call s:hl("Pmenu",          { "fg": s:white, "bg": s:graphite })
+call s:hl("Pmenu",          { "fg": s:white, "bg": s:lightblack })
 call s:hl("PmenuSel",       { "fg": s:white, "bg": s:gray, "style": "bold" })
-call s:hl("PmenuSBar",      { "bg": s:graphite })
+call s:hl("PmenuSBar",      { "bg": s:lightblack })
 call s:hl("PmenuThumb",     { "bg": s:gray })
 call s:hl("WildMenu",       { "fg": s:white, "bg": s:gray, "style": "bold" })
 
 " Tabs
-call s:hl("TabLine",        { "fg": s:gray, "bg": s:graphite })
+call s:hl("TabLine",        { "fg": s:gray, "bg": s:lightblack })
 highlight! link TabLineFill TabLine
 
 call s:hl("TabLineSel",     { "fg": s:white, "style": "bold,italic" })
@@ -163,7 +164,7 @@ call s:hl("SpellLocal",     { "style": "undercurl" })
 call s:hl("SpellRare",      { "style": "underdotted" })
 
 " Folding
-call s:hl("Folded",         { "fg": s:brown, "bg": s:graphite , "style": "italic" })
+call s:hl("Folded",         { "fg": s:brown, "bg": s:lightblack , "style": "italic" })
 call s:hl("FoldColumn",     { "fg": s:brown })
 
 " Diagnostic
@@ -173,8 +174,8 @@ call s:hl("DiagnosticInfo", { "fg": s:blue })
 call s:hl("DiagnosticHint", { "fg": s:gray })
 
 " Indentation
-call s:hl("ColorColumn",    { "bg": s:graphite })
-call s:hl("NonText",        { "fg": s:gray })
+call s:hl("ColorColumn",    { "bg": s:lightblack })
+call s:hl("NonText",        { "fg": s:darkgray })
 
 " Splits
 call s:hl("VertSplit",      { "fg": s:gray })
