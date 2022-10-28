@@ -8,19 +8,19 @@ set background=dark
 let g:colors_name = "gruber"
 
 " Colors
-let s:black         = ["#1c1c1c", "234"]
-let s:lightblack    = ["#262626", "235"]
-let s:darkgray      = ["#444444", "238"]
-let s:gray          = ["#626262", "241"]
-let s:white         = ["#e4e4e4", "254"]
+let s:black      = ["#1c1c1c", "234"]
+let s:lightblack = ["#262626", "235"]
+let s:darkgray   = ["#3a3a3a", "237"]
+let s:gray       = ["#626262", "241"]
+let s:white      = ["#e4e4e4", "254"]
 
-let s:red       = ["#ff5f5f", "203"]
-let s:green     = ["#87d75f", "113"]
-let s:yellow    = ["#ffd700", "220"]
-let s:blue      = ["#87afd7", "110"]
-let s:magenta   = ["#afafd7", "146"]
-let s:cyan      = ["#afd7af", "151"]
-let s:brown     = ["#af875f", "137"]
+let s:red     = ["#ff5f5f", "203"]
+let s:green   = ["#87d75f", "113"]
+let s:yellow  = ["#ffd700", "220"]
+let s:blue    = ["#87afd7", "110"]
+let s:magenta = ["#afafd7", "146"]
+let s:cyan    = ["#afd7af", "151"]
+let s:brown   = ["#af875f", "137"]
 
 function! s:hl(group, attrs) abort
     if has_key(a:attrs, "fg")
@@ -62,16 +62,16 @@ endfunction
 " Test highlighting with `:source $VIMRUNTIME/syntax/hitest.vim`
 " and `:help group-name`
 
-let s:fg = { "fg": s:white }
-let s:comment = { "fg": s:brown }
-let s:preproc = { "fg": s:cyan }
-let s:keyword = { "fg": s:yellow, "style": "bold" }
-let s:type = { "fg": s:yellow }
+let s:fg       = { "fg": s:white }
+let s:comment  = { "fg": s:brown }
+let s:preproc  = { "fg": s:cyan }
+let s:keyword  = { "fg": s:yellow, "style": "bold" }
+let s:type     = { "fg": s:yellow }
 let s:function = { "fg": s:blue }
-let s:literal = { "fg": s:magenta }
-let s:string = { "fg": s:green }
-let s:char = { "fg": s:cyan }
-let s:info = { "style": "italic" }
+let s:literal  = { "fg": s:magenta }
+let s:string   = { "fg": s:green }
+let s:char     = { "fg": s:cyan }
+let s:info     = { "style": "italic" }
 
 " Modes
 call s:hl("Normal",         { "fg": s:white, "bg": s:black })
