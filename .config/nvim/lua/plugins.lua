@@ -32,6 +32,9 @@ require("packer").startup(function (use)
 
     -- use("nvim-treesitter/playground")
 
+    use("~/Development/gruber.vim")
+    use("~/Development/svart.nvim")
+
     if packer_bootstrap then
         require("packer").sync()
     end
