@@ -41,11 +41,3 @@ keymap.set("n", "cd", "<Cmd>d %:p:h<CR>")
 -- dealing with word wrap
 keymap.set("n", "k", 'v:count == 0 ? "gk" : "k"', { expr = true, silent = true })
 keymap.set("n", "j", 'v:count == 0 ? "gj" : "j"', { expr = true, silent = true })
-
--- Telescope
-
-keymap.set("n", "<Leader>ff", "<Cmd>Telescope find_files<CR>")
-keymap.set("n", "<Leader>fg", "<Cmd>Telescope live_grep<CR>")
-keymap.set("n", "<Leader>fw", "<Cmd>Telescope grep_string<CR>")
-keymap.set("n", "<Leader>fb", "<Cmd>Telescope buffers<CR>")
-keymap.set("n", "<Leader>fh", "<Cmd>Telescope help_tags<CR>")

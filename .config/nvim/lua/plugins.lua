@@ -21,9 +21,6 @@ vim.cmd([[
 require("packer").startup(function (use)
     use("wbthomason/packer.nvim")
 
-    use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
-    use({ "nvim-telescope/telescope.nvim", tag = "0.1.0", requires = { { "nvim-lua/plenary.nvim" } } })
-
     use("lewis6991/gitsigns.nvim")
 
     use({
@@ -39,17 +36,6 @@ require("packer").startup(function (use)
         require("packer").sync()
     end
 end)
-
--- telescope
-local telescope = require("telescope")
-
-telescope.setup({
-    defaults = {
-        file_ignore_patterns = { "build", ".cache" }
-    }
-})
-
-telescope.load_extension("fzf")
 
 -- gitsigns
 local gitsigns = require("gitsigns")
