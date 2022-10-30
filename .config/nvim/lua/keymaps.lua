@@ -1,5 +1,5 @@
 local keymap = vim.keymap
-local all_modes = { "n", "v", "i", "c" }
+local all_modes = { "n", "v", "o", "i", "c" }
 
 vim.g.mapleader = " "
 
