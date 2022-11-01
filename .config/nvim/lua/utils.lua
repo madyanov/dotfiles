@@ -1,6 +1,6 @@
-local Utils = {}
+local M = {}
 
-function Utils.trim_trailing_whitespaces()
+function M.trim_trailing_whitespaces()
     if not vim.o.binary and vim.o.filetype ~= "diff" then
         local saved_view = vim.fn.winsaveview()
         vim.cmd([[ silent! keepjumps keeppatterns %s/\s\+$//e ]]) -- trim trailing whitespaces
@@ -9,4 +9,4 @@ function Utils.trim_trailing_whitespaces()
     end
 end
 
-return Utils
+return M
