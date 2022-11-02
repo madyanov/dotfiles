@@ -12,6 +12,9 @@ keymap.set(all_modes, "<Down>", "<NOP>")
 -- disable space
 keymap.set({ "n", "x", "o" }, "<Space>", "<NOP>")
 
+-- easier save
+keymap.set("n", "<Space>w", "<Cmd>update<CR>")
+
 -- don't save deleted characters into register
 keymap.set("n", "x", '"_x')
 

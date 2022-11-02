@@ -10,5 +10,5 @@ augroup END
 
 " augroup DisableCommentsContinuation
 "     autocmd!
-"     autocmd BufEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+"     autocmd BufEnter * silent! setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " augroup END

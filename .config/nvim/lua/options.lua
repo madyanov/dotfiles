@@ -40,10 +40,6 @@ set.laststatus = 2
 set.showcmd = true -- Neovim default
 set.ruler = true -- Neovim default
 
--- Appearance
-set.termguicolors = true
-set.cursorline = true
-
 -- Splits
 set.splitbelow = true
 set.splitright = true
@@ -74,5 +70,8 @@ set.timeoutlen = 1000 -- Vim default
 set.ttimeoutlen = 50 -- Neovim default
 set.backspace = { "indent", "eol", "start" } -- Neovim default
 
--- Theme
+-- Appearance
+set.termguicolors = true
+set.cursorline = true
+
 vim.cmd([[ colorscheme gruber ]])
