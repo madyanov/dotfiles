@@ -43,8 +43,8 @@ keymap.set("x", "<Leader>sv", ":s/\\%V/")
 keymap.set("n", "<Leader>s*", ":%s/<C-R><C-W>/")
 
 -- cd to current directory
--- keymap.set("n", "cd", "<Cmd>d %:p:h<CR>")
+keymap.set("n", "<Leader>cd", "<Cmd>d %:p:h<CR>")
 
 -- svart
-keymap.set({ "n", "x", "o" }, "s", "<Cmd>Svart<CR>", { silent = true })
-keymap.set({ "n", "x", "o" }, "S", "<Cmd>SvartRepeat<CR>", { silent = true })
+keymap.set({ "n", "x", "o" }, "s", "<Cmd>Svart<CR>")
+keymap.set({ "n", "x", "o" }, "S", "<Cmd>SvartRepeat<CR>")

@@ -1,7 +1,9 @@
 autoload -Uz compinit && compinit
 
-# Prompt
+setopt HIST_IGNORE_DUPS
 setopt PROMPT_SUBST
+
+# Prompt
 precmd() { precmd() { echo; } }
 git_branch() { git rev-parse --abbrev-ref HEAD 2> /dev/null; }
 PROMPT="%F{red}%n%f in %B%F{yellow}%~%f%b"$'\n'"%F{%(?.white.red)}%#%f "
