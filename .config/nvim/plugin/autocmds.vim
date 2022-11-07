@@ -7,8 +7,3 @@ augroup HightlightYank
     autocmd!
     autocmd TextYankPost * silent! lua vim.highlight.on_yank()
 augroup END
-
-" augroup DisableCommentsContinuation
-"     autocmd!
-"     autocmd BufEnter * silent! setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-" augroup END

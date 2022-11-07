@@ -71,7 +71,7 @@ set.ttimeoutlen = 50 -- Neovim default
 set.backspace = { "indent", "eol", "start" } -- Neovim default
 
 -- Appearance
-set.termguicolors = true
 set.cursorline = true
+set.termguicolors = true
 
 vim.cmd([[ colorscheme gruber ]])

@@ -1,15 +1,19 @@
 local keymap = vim.keymap
-local all_modes = { "n", "x", "o", "i", "c" }
 
 vim.g.mapleader = " "
 
 -- disable arrow keys
-keymap.set(all_modes, "<Left>", "<NOP>")
-keymap.set(all_modes, "<Right>", "<NOP>")
-keymap.set(all_modes, "<Up>", "<NOP>")
-keymap.set(all_modes, "<Down>", "<NOP>")
+-- todo: remove
+do
+    local modes = { "n", "x", "o", "i", "c" }
+    keymap.set(modes, "<Left>", "<NOP>")
+    keymap.set(modes, "<Right>", "<NOP>")
+    keymap.set(modes, "<Up>", "<NOP>")
+    keymap.set(modes, "<Down>", "<NOP>")
+end
 
 -- disable space
+-- todo: remove
 keymap.set({ "n", "x", "o" }, "<Space>", "<NOP>")
 
 -- easier save
@@ -37,13 +41,21 @@ keymap.set("n", "c*", "*``cgn")
 keymap.set("n", "c#", "#``cgN")
 
 -- replace in selection
-keymap.set("x", "<Leader>sv", ":s/\\%V/")
+keymap.set("x", "<Leader>sv", ":s/\\%V")
 
 -- replace word under cursor
 keymap.set("n", "<Leader>s*", ":%s/<C-R><C-W>/")
 
 -- cd to current directory
-keymap.set("n", "<Leader>cd", "<Cmd>d %:p:h<CR>")
+keymap.set("n", "<Leader>cd", "<Cmd>cd %:p:h<CR>")
+
+-- quickfix navigation
+keymap.set("n", "]q", "<Cmd>cnext<CR>")
+keymap.set("n", "[q", "<Cmd>cprevious<CR>")
+keymap.set("n", "]Q", "<Cmd>clast<CR>")
+keymap.set("n", "[Q", "<Cmd>cfirst<CR>")
+keymap.set("n", "]<C-Q>", "<Cmd>cnfile<CR>")
+keymap.set("n", "[<C-Q>", "<Cmd>cpfile<CR>")
 
 -- svart
 keymap.set({ "n", "x", "o" }, "s", "<Cmd>Svart<CR>")
