@@ -36,7 +36,7 @@ keymap.set("n", "<C-H>", "<Cmd>set hlsearch!<CR>")
 keymap.set("n", "k", 'v:count == 0 ? "gk" : "k"', { expr = true, silent = true })
 keymap.set("n", "j", 'v:count == 0 ? "gj" : "j"', { expr = true, silent = true })
 
--- replace word under cursor inline with repeating
+-- inline replace word under cursor with repeating
 keymap.set("n", "c*", "*``cgn")
 keymap.set("n", "c#", "#``cgN")
 
@@ -56,6 +56,10 @@ keymap.set("n", "]Q", "<Cmd>clast<CR>")
 keymap.set("n", "[Q", "<Cmd>cfirst<CR>")
 keymap.set("n", "]<C-Q>", "<Cmd>cnfile<CR>")
 keymap.set("n", "[<C-Q>", "<Cmd>cpfile<CR>")
+
+-- toggle spellcheck
+keymap.set("i", "<Leader>sp", "<C-O><Cmd>setlocal spell! spelllang=en_us,ru_ru<CR>")
+keymap.set("n", "<Leader>sp", "<Cmd>setlocal spell! spelllang=en_us,ru_ru<CR>")
 
 -- svart
 keymap.set({ "n", "x", "o" }, "s", "<Cmd>Svart<CR>")

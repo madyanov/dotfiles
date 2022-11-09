@@ -45,8 +45,8 @@ set.splitbelow = true
 set.splitright = true
 
 -- Match
--- set.showmatch = true -- may be useful with zero matchtime
--- set.matchtime = 0
+set.showmatch = true -- may be useful with low matchtime
+set.matchtime = 1
 
 -- Mouse
 set.mouse = "" -- Neovim default = "nvi"
