@@ -21,3 +21,10 @@ dotfiles config status.showUntrackedFiles no
 # Aliases
 alias vim="nvim"
 alias mc="mc --nosubshell"
+
+# Functions
+togif() {
+    local in=$1
+    local out=$2
+    ffmpeg -i "$in" -pix_fmt rgb8 -r 10 "$out" && gifsicle -O3 "$out" -o "$out"
+}

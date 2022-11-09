@@ -58,7 +58,6 @@ keymap.set("n", "]<C-Q>", "<Cmd>cnfile<CR>")
 keymap.set("n", "[<C-Q>", "<Cmd>cpfile<CR>")
 
 -- toggle spellcheck
-keymap.set("i", "<Leader>sp", "<C-O><Cmd>setlocal spell! spelllang=en_us,ru_ru<CR>")
 keymap.set("n", "<Leader>sp", "<Cmd>setlocal spell! spelllang=en_us,ru_ru<CR>")
 
 -- svart
