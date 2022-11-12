@@ -61,5 +61,6 @@ keymap.set("n", "[<C-Q>", "<Cmd>cpfile<CR>")
 keymap.set("n", "<Leader>sp", "<Cmd>setlocal spell! spelllang=en_us,ru_ru<CR>")
 
 -- svart
-keymap.set({ "n", "x", "o" }, "s", "<Cmd>Svart<CR>")
-keymap.set({ "n", "x", "o" }, "S", "<Cmd>SvartRepeat<CR>")
+keymap.set({ "n", "x", "o" }, "s", "<Cmd>Svart<CR>")        -- begin exact search
+keymap.set({ "n", "x", "o" }, "S", "<Cmd>SvartRegex<CR>")   -- begin regex search
+keymap.set({ "n", "x", "o" }, "gs", "<Cmd>SvartRepeat<CR>") -- repeat with last searched query
