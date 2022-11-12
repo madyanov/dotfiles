@@ -64,3 +64,7 @@ keymap.set("n", "<Leader>sp", "<Cmd>setlocal spell! spelllang=en_us,ru_ru<CR>")
 keymap.set({ "n", "x", "o" }, "s", "<Cmd>Svart<CR>")        -- begin exact search
 keymap.set({ "n", "x", "o" }, "S", "<Cmd>SvartRegex<CR>")   -- begin regex search
 keymap.set({ "n", "x", "o" }, "gs", "<Cmd>SvartRepeat<CR>") -- repeat with last searched query
+
+-- fzf
+keymap.set("n", "<Leader>ff", "<Cmd>Files<CR>")
+keymap.set("n", "<Leader>fg", "<Cmd>Rg<CR>")

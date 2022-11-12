@@ -74,6 +74,21 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  VimCompletesMe = {
+    loaded = true,
+    path = "/Users/roman/.local/share/nvim/site/pack/packer/start/VimCompletesMe",
+    url = "https://github.com/ackyshake/VimCompletesMe"
+  },
+  fzf = {
+    loaded = true,
+    path = "/Users/roman/.local/share/nvim/site/pack/packer/start/fzf",
+    url = "https://github.com/junegunn/fzf"
+  },
+  ["fzf.vim"] = {
+    loaded = true,
+    path = "/Users/roman/.local/share/nvim/site/pack/packer/start/fzf.vim",
+    url = "https://github.com/junegunn/fzf.vim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/roman/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",

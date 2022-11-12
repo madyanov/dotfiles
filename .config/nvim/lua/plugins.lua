@@ -26,6 +26,10 @@ packer.startup(function (use)
     use("nvim-lua/plenary.nvim")
 
     use("lewis6991/gitsigns.nvim")
+    use("ackyshake/VimCompletesMe")
+
+    use("junegunn/fzf")
+    use("junegunn/fzf.vim")
 
     use({
         "nvim-treesitter/nvim-treesitter",
