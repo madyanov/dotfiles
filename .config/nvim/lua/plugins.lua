@@ -25,7 +25,7 @@ packer.startup(function (use)
     use("wbthomason/packer.nvim")
     use("nvim-lua/plenary.nvim")
 
-    use("lewis6991/gitsigns.nvim")
+    use("airblade/vim-gitgutter")
     use("ackyshake/VimCompletesMe")
 
     use("junegunn/fzf")
@@ -47,10 +47,6 @@ packer.startup(function (use)
         packer.sync()
     end
 end)
-
--- gitsigns
-local gitsigns = require("gitsigns")
-gitsigns.setup()
 
 -- treesitter
 local treesitter = require("nvim-treesitter.configs")

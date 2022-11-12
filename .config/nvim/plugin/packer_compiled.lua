@@ -89,11 +89,6 @@ _G.packer_plugins = {
     path = "/Users/roman/.local/share/nvim/site/pack/packer/start/fzf.vim",
     url = "https://github.com/junegunn/fzf.vim"
   },
-  ["gitsigns.nvim"] = {
-    loaded = true,
-    path = "/Users/roman/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
-    url = "https://github.com/lewis6991/gitsigns.nvim"
-  },
   ["gruber.vim"] = {
     loaded = true,
     path = "/Users/roman/.local/share/nvim/site/pack/packer/start/gruber.vim",
@@ -123,6 +118,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/roman/.local/share/nvim/site/pack/packer/start/svart.nvim",
     url = "/Users/roman/Development/svart.nvim"
+  },
+  ["vim-gitgutter"] = {
+    loaded = true,
+    path = "/Users/roman/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
+    url = "https://github.com/airblade/vim-gitgutter"
   }
 }
 
