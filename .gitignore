@@ -10,6 +10,7 @@
 !.config/
 !.config/kitty/
 !.config/nvim/
+.config/nvim/plugin/packer_compiled.lua
 !.config/mc/
 
 !Wallpapers/
