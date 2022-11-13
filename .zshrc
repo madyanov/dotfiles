@@ -5,8 +5,8 @@ setopt PROMPT_SUBST
 
 # Prompt
 precmd() { precmd() { echo; } }
-# git_branch() { git rev-parse --abbrev-ref HEAD 2> /dev/null; }
 PROMPT="%F{red}%n%f in %B%F{yellow}%~%f%b"$'\n'"%F{%(?.white.red)}%#%f "
+# git_branch() { git rev-parse --abbrev-ref HEAD 2> /dev/null; }
 # RPROMPT="%B%F{green}\$(git_branch)%f%b"
 
 # Environment
