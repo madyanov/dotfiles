@@ -48,6 +48,10 @@ packer.startup(function (use)
     end
 end)
 
+-- gitsigns
+local gitsigns = require("gitsigns")
+gitsigns.setup()
+
 -- treesitter
 local treesitter = require("nvim-treesitter.configs")
 
