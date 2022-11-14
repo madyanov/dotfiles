@@ -5,6 +5,7 @@
 !.gitignore-global
 !.zshrc
 !.tmux.conf
+!.Xresources
 
 .config/*
 !.config/
