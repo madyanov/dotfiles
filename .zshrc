@@ -20,6 +20,7 @@ export EDITOR=nvim
 
 # Dotfiles
 # first initialize bare repository with `git init --bare $HOME/.dotfiles`
+# or clone it with `git clone --bare git@gitlab.com:madyanov/dotfiles.git "$HOME/.dotfiles"`
 # then hide untracked files with `dotfiles config status.showUntrackedFiles no`
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
