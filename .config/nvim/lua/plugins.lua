@@ -25,7 +25,7 @@ packer.startup(function (use)
     use("wbthomason/packer.nvim")
     use("nvim-lua/plenary.nvim")
 
-    use("airblade/vim-gitgutter")
+    use("lewis6991/gitsigns.nvim")
     use("ackyshake/VimCompletesMe")
 
     use("junegunn/fzf")
