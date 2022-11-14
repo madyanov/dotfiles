@@ -1,7 +1,7 @@
 autoload -Uz compinit && compinit
 zstyle :compinstall filename "$HOME/.zshrc"
 
-HISTFILE=~/.histfile
+HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
