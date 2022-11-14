@@ -25,7 +25,7 @@ set.autoindent = true -- Neovim default
 set.smarttab = true -- Neovim default
 
 -- Completion
-set.path:append("**")
+set.path = "**"
 set.completeopt = { "menuone", "preview", "noselect", "noinsert" }
 set.wildignore = { ".git/*", "build/*", ".cache/*", ".clangd/*" }
 set.wildmenu = true -- Neovim default
