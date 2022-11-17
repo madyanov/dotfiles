@@ -4,7 +4,7 @@
 [pull]
 	rebase = false
 [core]
-	excludesFile = ~/.gitignore-global
+	excludesFile = ~/.config/git/gitignore-global
 [init]
 	defaultBranch = master
 [push]
