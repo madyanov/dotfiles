@@ -1,7 +1,6 @@
 /*
 
 !.gitignore
-!.gitignore-global
 !.zshrc
 !.Xresources
 !.imwheelrc
@@ -9,10 +8,11 @@
 .config/*
 !.config/
 !.config/kitty/
-!.config/nvim/
-.config/nvim/plugin/packer_compiled.lua
 !.config/mc/
 !.config/tmux/
 !.config/git/
+
+!.config/nvim/
+.config/nvim/plugin/packer_compiled.lua
 
 !Wallpapers/
