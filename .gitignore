@@ -4,7 +4,6 @@
 !.gitconfig
 !.gitignore-global
 !.zshrc
-!.tmux.conf
 !.Xresources
 !.imwheelrc
 
@@ -14,5 +13,6 @@
 !.config/nvim/
 .config/nvim/plugin/packer_compiled.lua
 !.config/mc/
+!.config/tmux/
 
 !Wallpapers/
