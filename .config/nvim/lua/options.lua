@@ -61,7 +61,7 @@ g.netrw_keepdir = false
 g.netrw_banner = false
 
 -- Misc
-set.clipboard:append("unnamedplus")
+-- set.clipboard:append("unnamedplus")
 set.iskeyword:append("-")
 set.isfname:remove("=")
 set.undofile = true
