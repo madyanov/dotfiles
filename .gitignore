@@ -4,6 +4,7 @@
 !.zshrc
 !.Xresources
 !.imwheelrc
+!.Brewfile
 
 .config/*
 !.config/
