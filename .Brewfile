@@ -1,4 +1,8 @@
-# Usage: brew bundle --global
+# Usage:
+#
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# brew bundle --global
+#
 
 brew "clang-format"
 brew "cmake"
@@ -25,4 +29,5 @@ brew "universal-ctags"
 cask "appcleaner"
 cask "google-chrome"
 cask "kitty"
+# cask "qt-creator"
 cask "transmission"
