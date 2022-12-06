@@ -35,3 +35,20 @@ togif() {
     local out=$2
     ffmpeg -i "$in" -pix_fmt rgb8 -r 10 "$out" && gifsicle -O3 "$out" -o "$out"
 }
+
+cleanup() {
+    if command -v pacman &> /dev/null; then
+        sudo pacman -Qqd | sudo pacman -Rsu -
+        sudo paccache -rvk1
+        sudo paccache -rvuk0
+    fi
+
+    if command -v paru &> /dev/null; then
+        paru -Sc
+    fi
+
+    if command -v brew &> /dev/null; then
+        brew autoremove
+        brew cleanup
+    fi
+}
