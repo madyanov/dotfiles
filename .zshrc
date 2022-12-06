@@ -38,18 +38,24 @@ togif() {
 
 cleanup() {
     if command -v pacman &> /dev/null; then
+        set -x
         sudo pacman -Qqd | sudo pacman -Rsu -
         sudo paccache -rvk1
         sudo paccache -rvuk0
         sudo pacman -Sc
+        set +x
     fi
 
     if command -v paru &> /dev/null; then
+        set -x
         paru -Sc
+        set +x
     fi
 
     if command -v brew &> /dev/null; then
+        set -x
         brew autoremove
         brew cleanup
+        set +x
     fi
 }
