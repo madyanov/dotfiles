@@ -2,20 +2,6 @@ local keymap = vim.keymap
 
 vim.g.mapleader = " "
 
--- disable arrow keys
--- todo: remove
-do
-    local modes = { "n", "x", "o", "i", "c" }
-    keymap.set(modes, "<Left>", "<NOP>")
-    keymap.set(modes, "<Right>", "<NOP>")
-    keymap.set(modes, "<Up>", "<NOP>")
-    keymap.set(modes, "<Down>", "<NOP>")
-end
-
--- disable space
--- todo: remove
-keymap.set({ "n", "x", "o" }, "<Space>", "<NOP>")
-
 -- easier save
 keymap.set("n", "<Space>w", "<Cmd>update<CR>")
 
@@ -59,12 +45,3 @@ keymap.set("n", "[<C-Q>", "<Cmd>cpfile<CR>")
 
 -- toggle spellcheck
 keymap.set("n", "<Leader>sp", "<Cmd>setlocal spell! spelllang=en_us,ru_ru<CR>")
-
--- svart
-keymap.set({ "n", "x", "o" }, "s", "<Cmd>Svart<CR>")        -- begin exact search
-keymap.set({ "n", "x", "o" }, "S", "<Cmd>SvartRegex<CR>")   -- begin regex search
-keymap.set({ "n", "x", "o" }, "gs", "<Cmd>SvartRepeat<CR>") -- repeat with last searched query
-
--- fzf
-keymap.set("n", "<Leader>ff", "<Cmd>Files<CR>")
-keymap.set("n", "<Leader>fg", "<Cmd>Rg<CR>")
