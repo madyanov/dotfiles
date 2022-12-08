@@ -27,7 +27,10 @@ packer.startup(function(use)
     use("wbthomason/packer.nvim")
     use("nvim-lua/plenary.nvim")
 
-    use("lewis6991/gitsigns.nvim")
+    use({
+        "lewis6991/gitsigns.nvim",
+        config = function() require("gitsigns").setup() end,
+    })
 
     use("junegunn/fzf")
     use("junegunn/fzf.vim")
@@ -36,7 +39,7 @@ packer.startup(function(use)
         "nvim-treesitter/nvim-treesitter",
         run = function()
             require("nvim-treesitter.install").update({ with_sync = true })
-        end
+        end,
     })
 
     use("nvim-treesitter/playground")
@@ -45,15 +48,20 @@ packer.startup(function(use)
 
     use("hrsh7th/nvim-cmp")
     use("hrsh7th/cmp-nvim-lsp")
-    use("hrsh7th/cmp-buffer")
     use("hrsh7th/cmp-path")
-    use("hrsh7th/cmp-cmdline")
 
     use("saadparwaiz1/cmp_luasnip")
     use("L3MON4D3/LuaSnip")
 
     use("williamboman/mason.nvim")
     use("williamboman/mason-lspconfig.nvim")
+
+    use({
+        "numToStr/Comment.nvim",
+        config = function() require("Comment").setup() end,
+    })
+
+    use("rafamadriz/friendly-snippets")
 
     use("~/Development/gruber.vim")
     use("~/Development/svart.nvim")
@@ -62,10 +70,6 @@ packer.startup(function(use)
         packer.sync()
     end
 end)
-
--- gitsigns
-local gitsigns = require("gitsigns")
-gitsigns.setup()
 
 -- treesitter
 local treesitter = require("nvim-treesitter.configs")
@@ -104,11 +108,9 @@ cmp.setup({
         keyword_length = 2,
     },
     sources = {
-        { name = "buffer" },
         { name = "path" },
         { name = "nvim_lsp" },
         { name = "luasnip" },
-        { name = "cmdline" },
     },
     snippet = {
         expand = function(args)
@@ -157,9 +159,9 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local opts = { noremap = true, silent = true }
 keymap.set("n", "<space>e", vim.diagnostic.open_float, opts)
+keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)
 keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
 keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
-keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)
 
 local on_attach = function(_, bufnr)
     vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
@@ -167,19 +169,19 @@ local on_attach = function(_, bufnr)
     local bufopts = { noremap = true, silent = true, buffer = bufnr }
     keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
     keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
-    keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
     keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
+    keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
     keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, bufopts)
-    keymap.set("n", "<space>wa", vim.lsp.buf.add_workspace_folder, bufopts)
-    keymap.set("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, bufopts)
-    keymap.set("n", "<space>wl", function()
-        print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-    end, bufopts)
     keymap.set("n", "<space>D", vim.lsp.buf.type_definition, bufopts)
     keymap.set("n", "<space>rn", vim.lsp.buf.rename, bufopts)
     keymap.set("n", "<space>ca", vim.lsp.buf.code_action, bufopts)
     keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
     keymap.set("n", "<space>f", function() vim.lsp.buf.format { async = true } end, bufopts)
+    keymap.set("n", "<space>wa", vim.lsp.buf.add_workspace_folder, bufopts)
+    keymap.set("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, bufopts)
+    keymap.set("n", "<space>wl", function()
+        print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+    end, bufopts)
 end
 
 lsp.sumneko_lua.setup({
