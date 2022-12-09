@@ -45,3 +45,21 @@ keymap.set("n", "[<C-Q>", "<Cmd>cpfile<CR>")
 
 -- toggle spellcheck
 keymap.set("n", "<Leader>sp", "<Cmd>setlocal spell! spelllang=en_us,ru_ru<CR>")
+
+-- svart
+keymap.set({ "n", "x", "o" }, "s", "<Cmd>Svart<CR>")
+keymap.set({ "n", "x", "o" }, "S", "<Cmd>SvartRegex<CR>")
+keymap.set({ "n", "x", "o" }, "gs", "<Cmd>SvartRepeat<CR>")
+
+-- fzf
+keymap.set("n", "<Leader>ff", "<Cmd>Files<CR>")
+keymap.set("n", "<Leader>fg", "<Cmd>Rg<CR>")
+
+-- lsp
+do
+    local opts = { noremap = true, silent = true }
+    keymap.set("n", "<Leader>e", vim.diagnostic.open_float, opts)
+    keymap.set("n", "<Leader>q", vim.diagnostic.setloclist, opts)
+    keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
+    keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+end

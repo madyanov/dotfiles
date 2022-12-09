@@ -102,18 +102,6 @@ do
     })
 end
 
--- svart
-do
-    keymap.set({ "n", "x", "o" }, "s", "<Cmd>Svart<CR>")
-    keymap.set({ "n", "x", "o" }, "S", "<Cmd>SvartRegex<CR>")
-    keymap.set({ "n", "x", "o" }, "gs", "<Cmd>SvartRepeat<CR>")
-end
-
--- fzf
-do
-    keymap.set("n", "<Leader>ff", "<Cmd>Files<CR>")
-    keymap.set("n", "<Leader>fg", "<Cmd>Rg<CR>")
-end
 
 -- cmp
 do
@@ -169,12 +157,6 @@ do
     local lsp = require("lspconfig")
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-    local opts = { noremap = true, silent = true }
-    keymap.set("n", "<space>e", vim.diagnostic.open_float, opts)
-    keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)
-    keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-    keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
-
     local on_attach = function(_, bufnr)
         vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
@@ -182,16 +164,16 @@ do
         keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
         keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
         keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
+        keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
         keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
         keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, bufopts)
-        keymap.set("n", "<space>D", vim.lsp.buf.type_definition, bufopts)
-        keymap.set("n", "<space>rn", vim.lsp.buf.rename, bufopts)
-        keymap.set("n", "<space>ca", vim.lsp.buf.code_action, bufopts)
-        keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
-        keymap.set("n", "<space>f", function() vim.lsp.buf.format { async = true } end, bufopts)
-        keymap.set("n", "<space>wa", vim.lsp.buf.add_workspace_folder, bufopts)
-        keymap.set("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, bufopts)
-        keymap.set("n", "<space>wl", function()
+        keymap.set("n", "<Leader>D", vim.lsp.buf.type_definition, bufopts)
+        keymap.set("n", "<Leader>rn", vim.lsp.buf.rename, bufopts)
+        keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, bufopts)
+        keymap.set("n", "<Leader>ft", function() vim.lsp.buf.format { async = true } end, bufopts)
+        keymap.set("n", "<Leader>wa", vim.lsp.buf.add_workspace_folder, bufopts)
+        keymap.set("n", "<Leader>wr", vim.lsp.buf.remove_workspace_folder, bufopts)
+        keymap.set("n", "<Leader>wl", function()
             print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
         end, bufopts)
     end
