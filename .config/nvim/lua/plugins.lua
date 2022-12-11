@@ -51,6 +51,7 @@ do
         use("hrsh7th/nvim-cmp")
         use("hrsh7th/cmp-nvim-lsp")
         use("hrsh7th/cmp-path")
+        use("hrsh7th/cmp-buffer")
 
         use("saadparwaiz1/cmp_luasnip")
         use("L3MON4D3/LuaSnip")
@@ -69,8 +70,6 @@ do
             "numToStr/Comment.nvim",
             config = function() require("Comment").setup() end,
         })
-
-        use("rafamadriz/friendly-snippets")
 
         use("~/Development/gruber.vim")
         use("~/Development/svart.nvim")
@@ -110,12 +109,11 @@ do
 
     cmp.setup({
         completion = {
-            keyword_length = 2,
+            keyword_length = 1,
         },
         sources = {
             { name = "path" },
-            { name = "nvim_lsp" },
-            { name = "luasnip" },
+            { name = "buffer" },
         },
         snippet = {
             expand = function(args)
@@ -197,7 +195,7 @@ do
     for _, server in ipairs(servers) do
         lsp[server].setup({
             on_attach = on_attach,
-            capabilities = capabilities
+            capabilities = capabilities,
         })
     end
 end
