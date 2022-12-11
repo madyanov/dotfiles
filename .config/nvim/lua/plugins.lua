@@ -112,6 +112,7 @@ do
             keyword_length = 1,
         },
         sources = {
+            { name = "nvim_lsp" },
             { name = "path" },
             { name = "buffer" },
         },
