@@ -72,6 +72,8 @@ do
         })
 
         use("~/Development/gruber.vim")
+        use("~/Development/farewell.vim")
+
         use("~/Development/svart.nvim")
 
         if packer_bootstrap then
