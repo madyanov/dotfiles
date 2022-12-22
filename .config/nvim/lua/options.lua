@@ -74,4 +74,4 @@ set.backspace = { "indent", "eol", "start" } -- Neovim default
 set.cursorline = true
 set.termguicolors = true
 
-vim.cmd([[ colorscheme farewell ]])
+vim.cmd([[ colorscheme gruber ]])
