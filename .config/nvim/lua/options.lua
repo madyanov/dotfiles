@@ -60,6 +60,7 @@ set.sidescrolloff = 10
 set.foldmethod = "indent"
 set.foldlevel = 0 -- Default
 set.foldnestmax = 1
+set.foldclose = "all"
 set.foldcolumn = "auto"
 
 -- Netrw
