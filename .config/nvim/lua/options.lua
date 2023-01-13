@@ -56,6 +56,12 @@ set.mousemodel = "extend"
 set.scrolloff = 5
 set.sidescrolloff = 10
 
+-- Folding
+set.foldmethod = "indent"
+set.foldlevel = 0 -- Default
+set.foldnestmax = 1
+set.foldcolumn = "auto"
+
 -- Netrw
 g.netrw_keepdir = false
 g.netrw_banner = false
