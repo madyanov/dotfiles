@@ -29,6 +29,7 @@ brew "tmux"
 brew "tree"
 brew "universal-ctags"
 
+cast "android-studio"
 cask "appcleaner"
 cask "firefox"
 cask "google-chrome"
