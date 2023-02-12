@@ -14,7 +14,6 @@ do
 
         return false
     end
-
     vim.cmd([[
     augroup packer_user_config
         autocmd!
@@ -179,19 +178,7 @@ do
         end, bufopts)
     end
 
-    lsp.sumneko_lua.setup({
-        on_attach = on_attach,
-        settings = {
-            Lua = {
-                runtime = { version = "LuaJIT" },
-                diagnostics = { globals = { "vim" } },
-                workspace = { library = vim.api.nvim_get_runtime_file("", true) },
-                telemetry = { enable = false },
-            },
-        },
-    })
-
-    local servers = { "clangd", "gopls" }
+    local servers = { "clangd" }
     for _, server in ipairs(servers) do
         lsp[server].setup({
             on_attach = on_attach,
