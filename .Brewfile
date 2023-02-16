@@ -1,8 +1,6 @@
 # Usage:
-#
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # brew bundle --global
-#
 
 brew "clang-format"
 brew "cmake"
