@@ -6,6 +6,7 @@
 
 brew "clang-format"
 brew "cmake"
+brew "codespell"
 brew "cppcheck"
 brew "doxygen"
 brew "ffmpeg"
