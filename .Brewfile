@@ -1,11 +1,10 @@
 # Usage:
-#
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # brew bundle --global
-#
 
 brew "clang-format"
 brew "cmake"
+brew "codespell"
 brew "cppcheck"
 brew "doxygen"
 brew "ffmpeg"
@@ -41,6 +40,8 @@ cask "qbittorrent"
 # cask "qt-creator"
 cask "redream"
 cask "sweet-home3d"
+cask "telegram"
+cask "the-unarchiver"
 cask "transmission"
 cask "visual-studio-code"
 cask "vlc"
