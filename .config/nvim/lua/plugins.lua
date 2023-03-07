@@ -43,8 +43,6 @@ do
             end,
         })
 
-        use("nvim-treesitter/playground")
-
         use("neovim/nvim-lspconfig")
 
         use("hrsh7th/nvim-cmp")
@@ -95,7 +93,6 @@ do
             },
             additional_vim_regex_highlighting = false,
         },
-        playground = { enable = true },
     })
 end
 
