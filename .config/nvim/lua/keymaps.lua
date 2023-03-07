@@ -54,6 +54,7 @@ keymap.set({ "n", "x", "o" }, "gs", "<Cmd>SvartRepeat<CR>")
 -- fzf
 keymap.set("n", "<Leader>ff", "<Cmd>Files<CR>")
 keymap.set("n", "<Leader>fg", "<Cmd>Rg<CR>")
+keymap.set("n", "<Leader>fb", "<Cmd>Buffers<CR>")
 
 -- lsp
 do
