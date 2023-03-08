@@ -33,9 +33,6 @@ do
             config = function() require("gitsigns").setup() end,
         })
 
-        use("junegunn/fzf")
-        use("junegunn/fzf.vim")
-
         use({
             "nvim-treesitter/nvim-treesitter",
             run = function()
