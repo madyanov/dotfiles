@@ -14,12 +14,13 @@ do
 
         return false
     end
+
     vim.cmd([[
     augroup packer_user_config
         autocmd!
         autocmd BufWritePost plugins.lua source <afile> | PackerSync
     augroup end
-]]   )
+    ]])
 
     local packer_bootstrap = ensure_packer()
     local packer = require("packer")
@@ -93,7 +94,6 @@ do
     })
 end
 
-
 -- cmp
 do
     local cmp = require("cmp")
@@ -149,6 +149,7 @@ end
 -- lsp
 do
     local lsp = require("lspconfig")
+
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
     local on_attach = function(_, bufnr)
@@ -172,7 +173,7 @@ do
         end, bufopts)
     end
 
-    local servers = { "clangd" }
+    local servers = { "clangd", "sourcekit" }
     for _, server in ipairs(servers) do
         lsp[server].setup({
             on_attach = on_attach,
