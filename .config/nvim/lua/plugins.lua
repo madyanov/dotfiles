@@ -16,10 +16,10 @@ do
     end
 
     vim.cmd([[
-    augroup packer_user_config
-        autocmd!
-        autocmd BufWritePost plugins.lua source <afile> | PackerSync
-    augroup end
+        augroup packer_user_config
+            autocmd!
+            autocmd BufWritePost plugins.lua source <afile> | PackerSync
+        augroup end
     ]])
 
     local packer_bootstrap = ensure_packer()
@@ -173,7 +173,7 @@ do
         end, bufopts)
     end
 
-    local servers = { "clangd", "sourcekit" }
+    local servers = { "clangd" }
     for _, server in ipairs(servers) do
         lsp[server].setup({
             on_attach = on_attach,
