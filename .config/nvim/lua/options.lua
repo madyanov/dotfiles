@@ -81,3 +81,16 @@ set.cursorline = true
 set.termguicolors = true
 
 vim.cmd([[ colorscheme gruber ]])
+
+-- Commands
+vim.api.nvim_create_user_command(
+    "GG",
+    "noautocmd vimgrep /<args>/gj `git ls-files` | cw",
+    { nargs = 1 }
+)
+
+vim.api.nvim_create_user_command(
+    "GA",
+    "noautocmd vimgrep /<args>/gj ** | cw",
+    { nargs = 1 }
+)
