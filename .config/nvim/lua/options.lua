@@ -62,6 +62,7 @@ set.foldlevel = 0 -- Default
 set.foldnestmax = 1
 set.foldopen = "hor,mark,percent,quickfix,search,tag,undo"
 set.foldcolumn = "auto"
+set.foldenable = false
 
 -- Netrw
 g.netrw_keepdir = false
