@@ -88,6 +88,7 @@ do
                 "help",
                 "diff",
                 "make",
+                "bash",
             },
             additional_vim_regex_highlighting = false,
         },
