@@ -12,7 +12,7 @@ setopt PROMPT_SUBST
 precmd() { precmd() { echo; } }
 PROMPT="%F{red}%n%f in %B%F{yellow}%~%f%b"$'\n'"%F{%(?.white.red)}%#%f "
 git_is_repo() { git rev-parse --git-dir > /dev/null 2>&1; }
-git_has_changes() { git diff-index --quiet HEAD; }
+git_has_changes() { return $(git status --porcelain | wc -l); }
 git_branch() { git rev-parse --abbrev-ref HEAD 2> /dev/null; }
 git_prompt() { git_is_repo && (git_has_changes && echo "%F{green}$(git_branch)%f" || echo "%F{red}$(git_branch) *%f"); }
 RPROMPT="%B\$(git_prompt)%b"
