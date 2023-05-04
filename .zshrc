@@ -46,13 +46,13 @@ cleanup() {
         sudo pacman -Qqd | sudo pacman -Rsu -
         sudo paccache -rvk1
         sudo paccache -rvuk0
-        sudo pacman -Sc
+        sudo pacman -Sc --noconfirm
         set +x
     fi
 
     if command -v paru &> /dev/null; then
         set -x
-        paru -Sc
+        paru -Scd --noconfirm
         set +x
     fi
 
