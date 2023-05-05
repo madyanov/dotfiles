@@ -43,7 +43,7 @@ togif() {
 cleanup() {
     if command -v pacman &> /dev/null; then
         set -x
-        sudo pacman -Qqd | sudo pacman -Rsu -
+        sudo pacman -Qqd | sudo pacman -Rsu --noconfirm -
         sudo paccache -rvk1
         sudo paccache -rvuk0
         sudo pacman -Sc --noconfirm
@@ -52,7 +52,7 @@ cleanup() {
 
     if command -v paru &> /dev/null; then
         set -x
-        paru -Scd --noconfirm
+        paru -Scda --noconfirm
         set +x
     fi
 
