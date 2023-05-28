@@ -85,13 +85,19 @@ vim.cmd([[ colorscheme gruber ]])
 
 -- Commands
 vim.api.nvim_create_user_command(
-    "GG",
+    "GG", -- search in files known by git
     "noautocmd vimgrep /<args>/gj `git ls-files` | cw",
     { nargs = 1 }
 )
 
 vim.api.nvim_create_user_command(
-    "GA",
+    "GA", -- search in all files
     "noautocmd vimgrep /<args>/gj ** | cw",
     { nargs = 1 }
+)
+
+vim.api.nvim_create_user_command(
+    "Gadd", -- git add current file
+    "noautocmd silent !git add %",
+    { nargs = 0 }
 )
