@@ -42,6 +42,8 @@ keymap.set("n", "]Q", "<Cmd>clast<CR>")
 keymap.set("n", "[Q", "<Cmd>cfirst<CR>")
 keymap.set("n", "]<C-Q>", "<Cmd>cnfile<CR>")
 keymap.set("n", "[<C-Q>", "<Cmd>cpfile<CR>")
+keymap.set("n", "<C-N>", "<Cmd>bnext<CR>")
+keymap.set("n", "<C-P>", "<Cmd>bprev<CR>")
 
 -- toggle spellcheck
 keymap.set("n", "<Leader>sp", "<Cmd>setlocal spell! spelllang=en_us,ru_ru<CR>")
