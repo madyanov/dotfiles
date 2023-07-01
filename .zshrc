@@ -28,8 +28,6 @@ export EDITOR=nvim
 alias dotfiles='git --git-dir="$HOME/.dotfiles" --work-tree="$HOME"'
 
 # Aliases
-alias vim="nvim"
-alias vimdiff="nvim -d"
 alias mc="mc --nosubshell"
 alias dev='cd "$HOME/Development"'
 
