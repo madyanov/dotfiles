@@ -66,10 +66,9 @@ set.foldenable = false
 
 -- Netrw
 g.netrw_keepdir = false
-g.netrw_banner = false
 
 -- Misc
-set.iskeyword:remove("_")
+-- set.iskeyword:remove("_")
 set.isfname:remove("=")
 set.undofile = true
 set.updatetime = 500

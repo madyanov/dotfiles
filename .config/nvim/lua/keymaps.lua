@@ -1,9 +1,6 @@
 local keymap = vim.keymap
 
-vim.g.mapleader = " "
-
--- easier save
-keymap.set("n", "<Space>w", "<Cmd>update<CR>")
+vim.g.mapleader = "-"
 
 -- don't save deleted characters into register
 keymap.set("n", "x", '"_x')
@@ -11,9 +8,6 @@ keymap.set("n", "x", '"_x')
 -- don't jump on search
 keymap.set("n", "*", "*N")
 keymap.set("n", "#", "#N")
-
--- easier escape
-keymap.set("i", "jj", "<Esc>")
 
 -- toggle search highlighting
 keymap.set("n", "<C-H>", "<Cmd>set hlsearch!<CR>")
