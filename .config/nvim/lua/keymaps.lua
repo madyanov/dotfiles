@@ -1,6 +1,6 @@
 local keymap = vim.keymap
 
-vim.g.mapleader = "-"
+vim.g.mapleader = " "
 
 -- don't save deleted characters into register
 keymap.set("n", "x", '"_x')
