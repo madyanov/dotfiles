@@ -66,8 +66,8 @@ do
             config = function() require("Comment").setup() end,
         })
 
-        use("~/Development/gruber.vim")
-        use("~/Development/svart.nvim")
+        use("https://gitlab.com/madyanov/gruber.vim")
+        use("https://gitlab.com/madyanov/svart.nvim")
 
         if packer_bootstrap then
             packer.sync()
