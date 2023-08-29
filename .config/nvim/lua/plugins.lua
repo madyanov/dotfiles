@@ -156,7 +156,7 @@ do
         end, bufopts)
     end
 
-    local servers = { "clangd" }
+    local servers = { "clangd", "sourcekit" }
     for _, server in ipairs(servers) do
         lsp[server].setup({
             on_attach = on_attach,
